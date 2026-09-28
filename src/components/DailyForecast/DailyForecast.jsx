@@ -18,7 +18,7 @@ function DailyForecast({ dailyTemp }) {
       <h3>Daily forecast</h3>
       <div className={styles.daily_container}>
         {tempMinMax.map(({ date, max, min, weatherCode }, i) => (
-          <div key={i} className={styles.day}>
+          <div key={i} className={styles.day_info}>
             <p className={styles.label}>{date.toLocaleDateString("en-US", { weekday: "short" })}</p>
             <Icon code={getWeatherIcon(weatherCode)} size={32} />
             <div className={styles.temp_container}>

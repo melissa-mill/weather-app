@@ -1,0 +1,52 @@
+.hourly_container {
+  padding: 14px;
+  background-color: var(--gray);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.title_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+select {
+  height: 30px;
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(0.875rem, 0.786rem + 0.238vw, 1rem);
+  color: white;
+  background-color: var(--gray-light-2);
+  border: 1px solid var(--gray-light-3);
+  border-radius: 8px;
+}
+
+.data_container {
+  height: 75vh;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.hourly_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: var(--gray-light-2);
+  padding: 0 12px;
+  border: 1px solid var(--gray-light-3);
+  border-radius: 8px;
+}
+
+.hour {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hourly_card:not(:last-child) {
+  margin-bottom: 10px;
+}

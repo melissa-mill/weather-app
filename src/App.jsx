@@ -88,12 +88,14 @@ function App() {
       {loading && <div>Loading...</div>}
       {location && weatherData && (
         <div className="weather-data-container">
-          <LocationCard
-            location={location}
-            currentWeather={weatherData.current}
-            currentWeatherUnits={weatherData.current_units}
-          />
-          <DailyForecast dailyTemp={weatherData.daily} />
+          <div>
+            <LocationCard
+              location={location}
+              currentWeather={weatherData.current}
+              currentWeatherUnits={weatherData.current_units}
+            />
+            <DailyForecast dailyTemp={weatherData.daily} />
+          </div>
           <HourlyForecast
             currentDate={weatherData.current.time}
             hourlyTemp={weatherData.hourly}

@@ -1,0 +1,11 @@
+.weather-data-container {
+  display: grid;
+  grid-template-columns: 68% 30%;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .weather-data-container {
+    grid-template-columns: 100%;
+  }
+}

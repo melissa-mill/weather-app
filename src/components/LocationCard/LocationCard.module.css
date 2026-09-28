@@ -1,0 +1,78 @@
+.location {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.date {
+  font-size: clamp(0.875rem, 0.786rem + 0.238vw, 1rem);
+  color: var(--gray-light);
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 62px;
+  margin: 20px 0;
+}
+
+.location.day {
+  background: linear-gradient(to left, var(--blue-dark), var(--blue-2));
+}
+
+.location.night {
+  background: linear-gradient(to left, var(--blue-dark-3), var(--blue-3));
+}
+
+.card_container {
+  display: grid;
+  justify-content: space-between;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.card {
+  background-color: var(--gray);
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-light-3);
+}
+
+p {
+  margin: 0;
+}
+
+.label {
+  font-size: clamp(0.875rem, 0.786rem + 0.238vw, 1rem);
+  margin-bottom: 10px;
+  color: var(--gray-light);
+}
+
+.card_temp {
+  font-size: clamp(1.375rem, 1.196rem + 0.476vw, 1.625rem);
+}
+
+@media (max-width: 640px) {
+  .location {
+    flex-direction: column;
+    text-align: center;
+
+    .temperature {
+      margin: 20px auto;
+    }
+  }
+
+  .card_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 425px) {
+  .card_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

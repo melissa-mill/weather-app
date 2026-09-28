@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { getWeatherIcon } from "../../utils/weatherCodes.js";
-import { DAYS_IN_FILTER, transformHourlyData } from "../../utils/weatherUtils.js"
+import {
+  DAYS_IN_FILTER,
+  transformHourlyData,
+} from "../../utils/weatherUtils.js";
 import Icon from "../Icon.jsx";
 import styles from "./HourlyForecast.module.css";
 
@@ -48,25 +51,27 @@ function HourlyForecast({ currentDate, hourlyTemp }) {
           ))}
         </select>
       </div>
-      {hourlyData
-        .filter(({ time }) => {
-          const date = new Date(time);
-          return shouldShowHour(date);
-        })
-        .map(({ isDay, time, temp, weatherCode }, i) => {
-          const date = new Date(time);
-          const hour = date.getHours();
+      <div className={styles.data_container}>
+        {hourlyData
+          .filter(({ time }) => {
+            const date = new Date(time);
+            return shouldShowHour(date);
+          })
+          .map(({ isDay, time, temp, weatherCode }, i) => {
+            const date = new Date(time);
+            const hour = date.getHours();
 
-          return (
-            <div key={i} className={styles.hourly_card}>
-              <span className={styles.hour}>
-                <Icon code={getWeatherIcon(weatherCode, isDay)} />
-                {formatHour(hour)}
-              </span>
-              <span>{Math.round(temp)}°</span>
-            </div>
-          );
-        })}
+            return (
+              <div key={i} className={styles.hourly_card}>
+                <span className={styles.hour}>
+                  <Icon code={getWeatherIcon(weatherCode, isDay)} />
+                  {formatHour(hour)}
+                </span>
+                <span>{Math.round(temp)}°</span>
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }

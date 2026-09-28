@@ -1,0 +1,42 @@
+.forecast_container {
+  margin-bottom: 16px;
+}
+
+.daily_container {
+  display: grid;
+  justify-content: space-between;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, 90px);
+}
+
+.day_info {
+  background-color: var(--gray);
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-light-3);
+  text-align: center;
+
+  .label,
+  svg {
+    margin: 0 0 16px;
+  }
+}
+
+.temp_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.max_temp {
+  font-weight: 600;
+}
+
+.min_temp {
+  color: var(--gray-light);
+}
+
+@media (max-width: 425px) {
+  .daily_container {
+    grid-template-columns: repeat(auto-fill, 30%);
+  }
+}
