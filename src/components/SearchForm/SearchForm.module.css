@@ -29,6 +29,12 @@
   cursor: pointer;
 }
 
+.submit_btn:disabled {
+  cursor: auto;
+  color: var(--gray-light);
+  background-color: var(--blue-2);
+}
+
 @media (max-width: 640px) {
   .search_form {
     flex-direction: column;

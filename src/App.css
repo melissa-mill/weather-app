@@ -4,6 +4,16 @@
   gap: 16px;
 }
 
+.error,
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+  gap: 12px;
+}
+
 @media (max-width: 640px) {
   .weather-data-container {
     grid-template-columns: 100%;

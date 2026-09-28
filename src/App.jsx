@@ -1,5 +1,6 @@
 import { searchLocation, getLocationData } from "./services/api";
 import { useState } from "react";
+import { CloudLightning, Loader } from "lucide-react";
 import SearchForm from "./components/SearchForm/SearchForm";
 import LocationCard from "./components/LocationCard/LocationCard";
 import DailyForecast from "./components/DailyForecast/DailyForecast";
@@ -84,8 +85,14 @@ function App() {
         setSearchTerm={setSearchTerm}
         handleSubmit={handleSubmit}
       />
-      {error && <div>{error}</div>}
-      {loading && <div>Loading...</div>}
+      {error && <div className="error">
+        <CloudLightning size={62} />
+        {error}
+      </div>}
+      {loading && <div className="loading">
+        <Loader size={62}/>
+        Loading
+      </div>}
       {location && weatherData && (
         <div className="weather-data-container">
           <div>

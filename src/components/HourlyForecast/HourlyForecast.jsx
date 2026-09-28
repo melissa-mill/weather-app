@@ -46,7 +46,7 @@ function HourlyForecast({ currentDate, hourlyTemp }) {
         >
           {daysInFilter.map((day) => (
             <option key={day.day} value={day.day}>
-              {day.label}
+              {day.day === currentDay ? "Today" : day.label}
             </option>
           ))}
         </select>
