@@ -2,6 +2,8 @@
 
 A responsive weather application built with React that allows users to search for a city and view current weather conditions, hourly forecasts, and daily forecasts.
 
+[Demo](https://melissa-mill.github.io/weather-app/)
+
 ## Features
 - Search for a city and view its current weather.
 - Display current temperature and feels-like temperature.
